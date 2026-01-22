@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)),
+    url("Background.png") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: #ffffff;
+  width: 380px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.greetBox {
+  background: #ffffff;
+  text-align: center;
+  justify-content: center;
+  margin-top: 50px;
+  width: 550px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  position: absolute;
+}
+
+#greetBox {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 28px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+input[type="file"] {
+  padding: 6px;
+}
+
+button {
+  width: 100%;
+  margin-top: 30px;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: #7f3fcf;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #6a32b2;
+}
+
+.show {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  pointer-events: auto !important;
+}
+
+.hide {
+  opacity: 0 !important;
+  transform: scale(0.8) !important;
+  pointer-events: none !important;
+}
+
+@media (max-width: 420px) {
+  .card .greetBox {
+    width: 90%;
+  }
+}

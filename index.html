@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secret Basket | Registration</title>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <div class="card" id="card">
+    <h1>Registration</h1>
+    <p class="subtitle">Secret Basket</p>
+
+    <form id="signupForm" enctype="multipart/form-data">
+      <label>Full name</label>
+      <input type="text" name="name" placeholder="Enter your name" required/>
+
+      <label>Amount</label>
+      <input type="number" name="amount" placeholder="Enter amount" required/>
+
+      <label>Plan</label>
+      <input type="text" name="plan" placeholder="Enter plan" required/>
+
+      <label>Recommended by</label>
+      <input type="text" name="recommend" placeholder="Referral name" />
+
+      <label>Attach receipt</label>
+      <input type="file" id="receipt" name="receipt" accept="image/*" required/>
+
+      <button id="btn" type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="greetBox" id="greetBox">
+    <h2>🎉 Finished! 🎉</h2>
+    <p>Details submitted successfully. Thank you for connecting with us.</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
