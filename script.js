@@ -21,7 +21,7 @@ document.getElementById("signupForm").addEventListener("submit", async e => {
 
   const formData = new FormData(e.target);
 
-  const res = await fetch("https://sbserver-qba0.onrender.com/register", {
+  const res = await fetch("https://sbserver-rahi.onrender.com/register", {
     method: "POST",
     body: formData
   });
