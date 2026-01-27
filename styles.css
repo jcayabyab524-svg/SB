@@ -103,8 +103,27 @@ button:hover {
   pointer-events: none !important;
 }
 
-@media (max-width: 420px) {
-  .card .greetBox {
-    width: auto;
+@media (max-width: 600px) {
+  .card {
+    max-width: 90%; /* almost full width */
+    padding: 15px;
+  }
+
+  .greetBox {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 14px;
   }
 }
