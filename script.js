@@ -69,6 +69,8 @@ document.getElementById("signupForm").addEventListener("submit", async e => {
 
   } else {
     alert(data.error);
+    submitBtn.disabled = false;
+    submitBtn.innerText = "Submit";
   }
 
 });
