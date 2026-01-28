@@ -1,6 +1,26 @@
 const card = document.getElementById("card");
 const greetBox = document.getElementById("greetBox");
 
+const input = document.getElementById("numberInput");
+
+input.addEventListener("input", () => {
+  // Remove commas
+  let value = input.value.replace(/,/g, "");
+
+  // Only allow digits
+  if (/^\d*$/.test(value)) {
+    // Format with commas if not empty
+    if (value !== "") {
+      input.value = parseInt(value, 10).toLocaleString();
+    } else {
+      input.value = "";
+    }
+  } else {
+    // If user types non-digit, just strip it out
+    input.value = value.replace(/\D/g, "");
+  }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const fileInput = document.getElementById("receipt");
   const MAX_SIZE = 5 * 1024 * 1024; // 5MB
