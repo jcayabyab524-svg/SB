@@ -21,6 +21,11 @@ document.getElementById("signupForm").addEventListener("submit", async e => {
 
   const formData = new FormData(e.target);
 
+  const submitBtn = document.getElementById("btn");
+
+  submitBtn.disabled = true;
+  submitBtn.innerText = "Submitting...";
+
   const res = await fetch("https://sbserver-rahi.onrender.com/register", {
     method: "POST",
     body: formData
