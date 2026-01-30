@@ -46,7 +46,7 @@ document.getElementById("signupForm").addEventListener("submit", async e => {
   submitBtn.disabled = true;
   submitBtn.innerText = "Submitting...";
 
-  const res = await fetch("https://sbserver-rahi.onrender.com/register", {
+  const res = await fetch(process.env.REQUEST_URI, {
     method: "POST",
     body: formData
   });
