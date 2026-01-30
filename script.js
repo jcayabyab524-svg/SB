@@ -1,3 +1,5 @@
+require("dotenv").config(); // must be first
+
 const card = document.getElementById("card");
 const greetBox = document.getElementById("greetBox");
 
